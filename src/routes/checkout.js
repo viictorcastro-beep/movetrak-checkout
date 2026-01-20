@@ -55,8 +55,9 @@ router.post('/', async (req, res) => {
       // Continue with checkout even if shipping calculation fails
     }
 
-    // Calculate total value (for now, just shipping cost)
-    // In a real scenario, you'd add product cost here
+    // Calculate total value
+    // NOTE: Product pricing not specified in requirements, currently only charging shipping
+    // TODO: Add product cost calculation based on qty and unit price
     const totalValue = shippingCost;
 
     // Create payment in Asaas

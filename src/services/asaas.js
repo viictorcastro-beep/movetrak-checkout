@@ -7,6 +7,10 @@ class AsaasService {
   constructor() {
     this.apiKey = process.env.ASAAS_API_KEY;
     this.baseUrl = 'https://api.asaas.com/v3';
+    
+    if (!this.apiKey) {
+      console.error('ASAAS_API_KEY não configurado nas variáveis de ambiente');
+    }
   }
 
   /**

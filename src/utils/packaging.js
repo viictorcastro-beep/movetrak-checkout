@@ -66,8 +66,11 @@ function calculatePackaging(qty) {
 /**
  * Calculate total weight based on quantity
  * Unit weight: 0.0432kg
- * Packaging weight: 0.020kg
- * Total: qty * 0.0632
+ * Packaging weight: 0.020kg per unit (as specified in requirements)
+ * Total: qty * 0.0632kg
+ * 
+ * Note: The packaging weight is calculated per unit, not per package,
+ * as per the requirements: "total=qty*(0.0632)"
  */
 function calculateWeight(qty) {
   const quantity = parseInt(qty);

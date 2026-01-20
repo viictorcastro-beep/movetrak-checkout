@@ -7,6 +7,10 @@ class SuperfreteService {
   constructor() {
     this.token = process.env.SUPERFRETE_TOKEN;
     this.baseUrl = 'https://api.superfrete.com';
+    
+    if (!this.token) {
+      console.error('SUPERFRETE_TOKEN não configurado nas variáveis de ambiente');
+    }
   }
 
   /**
